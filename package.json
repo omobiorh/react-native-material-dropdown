@@ -1,6 +1,6 @@
 {
   "name": "react-native-material-dropdown-v2",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "license": "BSD-3-Clause",
   "contributors": [
     {
@@ -14,6 +14,14 @@
     {
       "name": "James Brown",
       "email": "brownj95@gmail.com"
+    },
+    {
+      "name": "Davide Polano",
+      "email": "davide@mdslab.org"
+    },
+    {
+      "name": "Cristina Cucinotta",
+      "email": "cristina@mdslab.org"
     }
   ],
   "description": "Material dropdown",

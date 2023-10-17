@@ -487,7 +487,8 @@ export default class Dropdown extends PureComponent {
         value={title}
         editable={false}
         onChangeText={undefined}
-        renderAccessory={renderAccessory}
+        right={renderAccessory()}
+        //renderAccessory={renderAccessoryOld}
       />
     );
   }
@@ -524,6 +525,19 @@ export default class Dropdown extends PureComponent {
   }
 
   renderAccessory() {
+    let { baseColor: backgroundColor } = this.props;
+    let triangleStyle = { backgroundColor };
+
+    return (
+      <TextInput.Icon
+        style={triangleStyle}
+        color={this.props.iconColor ? this.props.iconColor : '#000'}
+        name={this.props.icon ? this.props.icon : 'chevron-down'}
+      />
+    );
+  }
+
+  renderAccessoryOld() {
     let { baseColor: backgroundColor } = this.props;
     let triangleStyle = { backgroundColor };
 
@@ -582,10 +596,10 @@ export default class Dropdown extends PureComponent {
     let color = disabled
       ? disabledItemColor
       : ~selected
-      ? index === selected
-        ? selectedItemColor
-        : itemColor
-      : selectedItemColor;
+        ? index === selected
+          ? selectedItemColor
+          : itemColor
+        : selectedItemColor;
 
     let textStyle = { color, fontSize };
 
