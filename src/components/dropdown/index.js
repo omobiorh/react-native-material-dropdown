@@ -488,7 +488,7 @@ export default class Dropdown extends PureComponent {
         editable={false}
         onChangeText={undefined}
         right={renderAccessory()}
-        //renderAccessory={renderAccessoryOld}
+      //renderAccessory={renderAccessory()}
       />
     );
   }
@@ -532,7 +532,7 @@ export default class Dropdown extends PureComponent {
       <TextInput.Icon
         style={triangleStyle}
         color={this.props.iconColor ? this.props.iconColor : '#000'}
-        name={this.props.icon ? this.props.icon : 'chevron-down'}
+        icon={this.props.icon ? this.props.icon : 'chevron-down'}
       />
     );
   }
